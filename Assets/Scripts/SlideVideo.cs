@@ -28,6 +28,9 @@ public class SlideVideo : SlideElement {
     private void OnDisable()
     {
         videoPlayer.Stop();
+
+        Graphics.SetRenderTarget(videoPlayer.targetTexture);
+        GL.Clear(false, true, new Color(0, 0, 0));
     }
 
 }
